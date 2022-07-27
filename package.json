@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@ethersproject/bignumber": "^5.6.0",
+    "@ethersproject/units": "^5.6.0",
+    "@openzeppelin/contracts": "^4.7.1",
+    "@types/lodash": "^4.14.182",
+    "@web3-react/core": "^8.0.33-beta.0",
+    "@web3-react/metamask": "^8.0.26-beta.0",
+    "@web3-react/store": "^8.0.24-beta.0",
+    "@web3-react/types": "^8.0.19-beta.0",
+    "antd": "^4.21.7",
+    "bignumber.js": "^9.0.2",
+    "ethers": "^5.6.9",
+    "lodash": "^4.17.21",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "umi": "^3.5.26"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.26",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}
